@@ -1,9 +1,12 @@
 from typing import Optional
 
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
+
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
         def find_middle_node(head: Optional[ListNode]):
@@ -12,6 +15,7 @@ class Solution:
                 slow = slow.next
                 fast = fast.next.next
             return slow
+
         # linked lst reading forward -> middle node
         def first_half(head: Optional[ListNode]):
             forward = r = ListNode()
@@ -21,6 +25,7 @@ class Solution:
                 head = head.next
                 r = r.next
             return forward.next
+
         # second linked middle node -> end node reversed
         def reversed_second_half(head: Optional[ListNode]):
             previous = None
@@ -31,8 +36,11 @@ class Solution:
                 previous = current
                 current = temp_next
             return previous
+
         # merge 2 linked list with a cpy 3rd list
-        def merge_linked_lists(first_half: Optional[ListNode], reversed_second_half: Optional[ListNode]):
+        def merge_linked_lists(
+            first_half: Optional[ListNode], reversed_second_half: Optional[ListNode]
+        ):
             dummy = reader = ListNode()
             counter = 0
             while first_half and reversed_second_half:
@@ -45,7 +53,8 @@ class Solution:
                 counter += 1
                 reader = reader.next
 
-
             return dummy.next
 
-        return merge_linked_lists(first_half(head), reversed_second_half(find_middle_node(head)))
+        return merge_linked_lists(
+            first_half(head), reversed_second_half(find_middle_node(head))
+        )
