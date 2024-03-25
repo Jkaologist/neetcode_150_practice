@@ -3,7 +3,7 @@ from typing import Counter
 
 
 # sort by highest freq, chop k elements
-def topKFrequent(nums, k):
+def top_k_frequent(nums, k):
     c = Counter(nums)
     sorted_nums = sorted(c.items(), key=lambda x: x[1], reverse=True)[:k]
     print(sorted_nums)
@@ -11,7 +11,7 @@ def topKFrequent(nums, k):
 
 
 # top k elements, maintain with max heap
-def topKFrequent(nums, k):
+def top_k_frequent(nums, k):
     counter = {}
     for num in nums:
         counter[num] = counter.get(num, 0) + 1
@@ -19,7 +19,7 @@ def topKFrequent(nums, k):
 
 
 # set to 0 after max read
-def topKFrequent(nums, k):
+def top_k_frequent(nums, k):
     counter = {}
     for num in nums:
         counter[num] = counter.get(num, 0) + 1
@@ -33,7 +33,7 @@ def topKFrequent(nums, k):
 
 
 # list pop
-def topKFrequent(nums, k):
+def top_k_frequent(nums, k):
     counter = {}
     for num in nums:
         counter[num] = counter.get(num, 0) + 1
@@ -46,5 +46,5 @@ def topKFrequent(nums, k):
     return out
 
 
-print(topKFrequent([1, 1, 1, 2, 2, 3], 2))
-print(topKFrequent([1], 1))
+print(top_k_frequent([1, 1, 1, 2, 2, 3], 2))
+print(top_k_frequent([1], 1))

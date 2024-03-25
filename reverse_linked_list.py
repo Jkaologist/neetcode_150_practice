@@ -8,7 +8,7 @@ class ListNode:
 
 
 class Solution:
-    def reorderList(self, head: Optional[ListNode]) -> None:
+    def reorder_list(self, head: Optional[ListNode]) -> None:
         def find_middle_node(head: Optional[ListNode]):
             slow = fast = head
             while fast and fast.next:

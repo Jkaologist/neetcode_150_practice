@@ -1,4 +1,4 @@
-def productExceptSelf(nums):
+def product_except_self(nums):
     n = len(nums)
     left_products = [1] * n
     right_products = [1] * n
@@ -21,4 +21,4 @@ def productExceptSelf(nums):
     return output
 
 
-print(productExceptSelf([1, 2, 3, 4, 5]))
+print(product_except_self([1, 2, 3, 4, 5]))
