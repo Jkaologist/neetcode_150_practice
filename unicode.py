@@ -1,17 +1,24 @@
+from pprint import pprint as p
+
 s = "🫥"
-def convert_to_ord(s):
+def encode(s):
     lst = []
     for c in s:
         lst.append(ord(c))
     return lst
 
-print(convert_to_ord(s))
+# p(encode(s))
 
-def convert_to_str(ord_list):
+def decode(ord_list):
     out = ""
     for ordinal in ord_list:
         out += chr(ordinal)
     return out
 
-print(convert_to_str(convert_to_ord(s)))
+messages = [[76, 101, 116, 115, 32, 103, 101, 116, 32, 116, 104, 105, 115, 32, 127838], [65, 115, 115, 127828, 115]]
 
+def pprint_messages(messages):
+    for message in messages:
+        p(decode(message))
+
+p(pprint_messages(messages))
