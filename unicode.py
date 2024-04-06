@@ -1,4 +1,4 @@
-s = "🧁Ass_Muffins🧁"
+s = "🫥"
 def convert_to_ord(s):
     lst = []
     for c in s:
@@ -15,4 +15,3 @@ def convert_to_str(ord_list):
 
 print(convert_to_str(convert_to_ord(s)))
 
-print(chr(1114111))
