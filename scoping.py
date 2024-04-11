@@ -2,7 +2,7 @@ max_a = [1]
 diameter_a = 1
 def just_a_function():
     # nonlocal max_a # will not work, same scope
-    # nonlocal diamter_a # will not work, same scope
+    # nonlocal diameter_a # will not work, same scope
     print(max_a)
     print(diameter_a)
     return

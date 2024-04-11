@@ -13,3 +13,5 @@ def find_all_combinations(lst = [1,2], target= 4):
 
 print(find_all_combinations([1,2], 4))
 print(find_all_combinations([1,2,3], 4))
+
+const = "WORKING"
