@@ -7,7 +7,6 @@ class TrieNode:
     def __str__(self):  
         return "From str method of TrieNode: children are % s, " \
               "isWord is % s" % (self.children, self.isWord)
-
 class Trie:
     def __init__(self):
         self.root = TrieNode()
