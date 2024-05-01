@@ -4,7 +4,7 @@ class UnionFindByrank:
     def union_find(self, size):
         self.roots = self.ranks = [0] * size
         for i in range(size):
-            self.roots[i] =  self.ranks[i] = i
+            self.roots[i] = self.ranks[i] = i
     def test_union_find(self):
         self.union_find(5)
         print(union_finder.roots, union_finder.ranks)
