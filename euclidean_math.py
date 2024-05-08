@@ -12,7 +12,6 @@ def euclidean_dist(x, y):
     math_euc = math.dist(x, y)
     return {"euclidean": euc, "math library euclidean": math_euc}
 
-print(euclidean_dist(x, y))
-
+print(euclidean_dist(x, y)) # same from formula and from library
 print(int(float_answer)) # 16
 print(pow(3, 5)) # 243
