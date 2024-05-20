@@ -5,7 +5,7 @@
 
 from math import inf
 
-# top down
+# # top down
 def coinChange(coins, amount):
     memo = {}
     def top_down(amount, min_count = inf):
@@ -23,6 +23,7 @@ def coinChange(coins, amount):
         return min_count
     return top_down(amount) if top_down(amount) != inf else -1
 
+# # bottom up
 # def coinChange(coins, amount):
 #     dp = [float('inf')] * (amount + 1)
 #     dp[0] = 0
