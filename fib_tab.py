@@ -12,7 +12,6 @@ def fib(n):
         if i < n - 1:
             table[i + 2] += table[i]
         table[i + 1] += table[i]
-    print(table)
     return table[-1]
 
 print(fib(6)) # 8
