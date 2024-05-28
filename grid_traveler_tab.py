@@ -16,6 +16,5 @@ def pprint(grid):
     print("------")
     for row in grid:
         print(row)
-    print("------")
 
 print(grid_traveler(3, 3)) # 6
