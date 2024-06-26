@@ -1,7 +1,10 @@
 s = "helloworld"
+
 lookup = {}
 for idx, char in enumerate(s):
     lookup[char] = idx
+
+print(lookup)
 
 lookup2 = {}
 s2 = set(s)
