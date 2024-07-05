@@ -17,7 +17,7 @@ hex1 = 0xc
 bit2 = 0b100
 num7 = bit2 >> 1
 num8 = bit2 << 1
+
 print(num7) # 2
 print(num8) # 8
-
 print(hex1 << 1) # NOTE: can shift hexadecimal as well
