@@ -21,3 +21,15 @@ num8 = bit2 << 1
 print(num7) # 2
 print(num8) # 8
 print(hex1 << 1) # NOTE: can shift hexadecimal as well
+
+num9 = 20
+print(format(num9, '032b'))
+
+mask = 0xFFFFFFFF
+1110000000
+1111111111
+1110000000
+a = 2
+b = 3
+a, b = (a ^ b) & mask, ((a & b) << 1) & mask
+print(a, b)
